@@ -20,6 +20,19 @@ export function activate(context: vscode.ExtensionContext) {
 		console.log(`Active terminal changed, name=${e ? e.name : 'undefined'}`);
 	});
 
+	context.subscriptions.push(vscode.commands.registerCommand('terminalTest.createShowTerminal', () => {
+		const myTerminal = vscode.window.createTerminal('My Terminal');
+		myTerminal.show(true);
+	}));
+
+	context.subscriptions.push(vscode.commands.registerCommand('terminalTest.activeTerminal', () => {
+		if (vscode.window.activeTerminal === undefined) {
+			vscode.window.showInformationMessage('activeTerminal is undefined');
+		} else {
+			vscode.window.showInformationMessage(`activeTerminal: ${vscode.window.activeTerminal.name}`);
+		}
+	}));
+
 	// vscode.window.createTerminal
 	context.subscriptions.push(vscode.commands.registerCommand('terminalTest.createTerminal', () => {
 		vscode.window.createTerminal(`Ext Terminal #${NEXT_TERM_ID++}`);
