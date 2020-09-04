@@ -13,6 +13,8 @@
 	],
 	"activationEvents": [
 		"onCommand:terminalTest.createAndSend",
+		"onCommand:terminalTest.activeTerminal",
+		"onCommand:terminalTest.createShowTerminal",
 		"onCommand:terminalTest.createTerminal",
 		"onCommand:terminalTest.createTerminalHideFromUser",
 		"onCommand:terminalTest.createZshLoginShell",
@@ -37,6 +39,14 @@
 			{
 				"command": "terminalTest.createAndSend",
 				"title": "Terminal API: Create Terminal and Immediately Send"
+			},
+			{
+				"command": "terminalTest.activeTerminal",
+				"title": "Terminal API: Check activeTerminal"
+			},
+			{
+				"command": "terminalTest.createShowTerminal",
+				"title": "Terminal API: Create & Show Terminal"
 			},
 			{
 				"command": "terminalTest.createTerminal",
