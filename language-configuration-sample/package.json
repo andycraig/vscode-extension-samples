@@ -13,13 +13,12 @@
   "contributes": {
     "languages": [
       {
-        "id": "javascript",
+        "id": "abcdef",
         "extensions": [
-          ".js"
+          ".abcdef"
         ],
         "aliases": [
-          "js",
-          "JavaScript"
+          "abcdef"
         ],
         "configuration": "./language-configuration.json"
       }
